@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tuanbaol.jshiro.dao.RoleDAO">
+    <select id="getByUserName" resultType="com.tuanbaol.jshiro.bean.Role">
+    select r.* from auth.t_user u inner join  auth.t_user_role ur on u.id=ur.user_id
+     inner join  auth.t_role r on ur.role_id=r.id
+    where u.name=#{name}
+</select>
+
+</mapper>

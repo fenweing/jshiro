@@ -1,0 +1,19 @@
+POST localhost:8080/auth/login1
+Content-Type: application/json
+
+{"name": "app","password": "123"}
+###
+
+POST localhost:8080/auth/logout
+Content-Type: application/json
+Cookie: JSESSIONID=4f9a449b-b957-4bd3-ac50-cfb6601f4c77
+
+###
+
+GET localhost:8080/user/system
+#Cookie: JSESSIONID=9fc374d1-d434-43cc-933d-760215fc8b69
+###
+GET localhost:8080/role/getByName/admin
+#Cookie: JSESSIONID=44195b0e-4ea2-4358-aa81-f6b6512d6e68
+###
+75ce236c-2229-41a4-8103-ae62af888db6 44195b0e-4ea2-4358-aa81-f6b6512d6e68

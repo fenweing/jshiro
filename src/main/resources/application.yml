@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://www.tuanbaol.com:5432/shiro
+    username: postgres
+    password: 12345
+  redis:
+    host: www.tuanbaol.com
+    password: 123456780
+    port: 6379
+    timeout: 3000
+    pool:
+    max-idle: 8
+    min-idle: 0
+    max-active: 8
+    max-wait: -1
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
